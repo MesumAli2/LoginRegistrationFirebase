@@ -64,7 +64,14 @@ class MainFragment : Fragment() {
             // TODO call launchSignInFlow when authButton is clicked
             launchSignInFlow()
         }
+        binding.settingsBtn.setOnClickListener {
+            findNavController().navigate(R.id.settingsFragment)
+        }
+        // If the user presses the back button, bring them back to the home screen
+
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
